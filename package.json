@@ -1,0 +1,17 @@
+{  
+  "name": "deconflict",
+  "version": "0.0.1",
+  "description": "Demo code to show conflict resolution",
+  "repository": "https://github.com/glynnbird/deconflict.git",
+  "keywords": [
+    "CouchDB",
+    "curl",
+    "couch",
+    "conflict"
+  ],
+  "author": "Glynn Bird",
+  "license": "BSD",
+  "dependencies": {
+    "cloudant": "^1.0.0-beta3"
+  }
+}
