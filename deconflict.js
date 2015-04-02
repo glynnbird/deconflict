@@ -1,4 +1,3 @@
-
 // thsis function takes the list of revisions and removes any deleted or not 'ok' ones.
 // returns a flat array of document objects
 var filterList = function(list,excluderev) {
@@ -81,8 +80,6 @@ var merge = function(db, docid, callback) {
     }
     winner = data;
     
-    console.log("Winner",winner);
-    
     // fetch the document with open_revs=all
     db.get(docid, {open_revs:'all'}, function(err, data) {
     
@@ -112,7 +109,10 @@ var merge = function(db, docid, callback) {
   });  
 };
 
+// In a database 'db' (a nano object), that has document with id 'docid', resolve the
+// conflicts by only keeping the nominated revision (rev)
 var nominated = function(db, docid, rev, callback) {
+  
   // fetch the document with open_revs=all
   db.get(docid, {open_revs:'all'}, function(err, data) {
   
